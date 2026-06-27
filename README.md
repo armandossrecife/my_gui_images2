@@ -111,20 +111,31 @@ Os testes cobrem:
 - geração concorrente de nomes sem colisões;
 - publicação da imagem somente após a validação;
 - rejeição de downloads acima do limite;
-- cancelamento e remoção de arquivos incompletos.
+- cancelamento e remoção de arquivos incompletos;
 - formatação dos indicadores de tamanho;
 - cálculo da grade responsiva;
-- ajuste proporcional e limite seguro de zoom.
+- ajuste proporcional e limite seguro de zoom;
+- compatibilidade da fachada pública após a divisão em módulos.
 
 ## Estrutura do projeto
 
 ```text
 .
 ├── main.py                 # Ponto de entrada da aplicação
-├── gui.py                  # Interface, galeria, visualizador e tema
+├── gui.py                  # Composição principal e fachada compatível
 ├── entidades.py            # Utilitários, validação e download
+├── ui/
+│   ├── constants.py        # Tokens visuais e limites de renderização
+│   ├── helpers.py          # Cálculos puros e formatação
+│   ├── theme.py            # Tema ttk e tooltips
+│   ├── download_panel.py   # Formulário e estado do download
+│   ├── gallery_panel.py    # Grade responsiva de miniaturas
+│   └── image_viewer.py     # Visualização, zoom e movimentação
 ├── imagens/                # Imagens salvas pela aplicação
-├── tests/                  # Testes automatizados
+├── tests/
+│   ├── test_entidades.py   # Regras de download e arquivos
+│   ├── test_gui_helpers.py # Cálculos independentes da interface
+│   └── test_gui_modules.py # Contrato público entre os módulos
 ├── docs/                   # Capturas de tela e documentação visual
 ├── pyproject.toml          # Metadados e dependências
 └── uv.lock                 # Versões resolvidas das dependências

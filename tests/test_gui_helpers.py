@@ -1,6 +1,6 @@
 import unittest
 
-from gui import (
+from ui.helpers import (
     calculate_fit_scale,
     calculate_grid_columns,
     calculate_safe_zoom_limit,

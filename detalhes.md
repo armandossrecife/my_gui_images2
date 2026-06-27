@@ -18,26 +18,47 @@
 
 ## Módulo `gui`
 
-### `AppTheme`
-
-Configura cores, tipografia, espaçamento e estados dos componentes `ttk`.
+O módulo funciona como ponto de composição da aplicação e como fachada de
+compatibilidade. Assim, importações anteriores como `gui.MenuWindow` e
+`gui.WindowImageViewer` continuam válidas.
 
 ### `MenuWindow`
 
 Compõe a janela principal, mantém a lista de imagens e coordena a seleção entre
 biblioteca e visualizador.
 
-### `DownloadPanel`
+## Pacote `ui`
+
+### `constants`
+
+Centraliza cores, tipografia, dimensões de miniaturas e limites de renderização.
+
+### `helpers`
+
+Reúne funções puras de formatação, cálculo da grade e escalas de visualização.
+Por não dependerem de uma janela Tk, essas funções são testadas isoladamente.
+
+### `theme`
+
+Contém `AppTheme` e `Tooltip`, responsáveis pelo sistema visual compartilhado.
+
+### `download_panel`
+
+#### `DownloadPanel`
 
 Controla o formulário de URL, a thread de download, a fila de eventos, a barra de
 progresso e os estados de sucesso, erro e cancelamento.
 
-### `GalleryPanel`
+### `gallery_panel`
+
+#### `GalleryPanel`
 
 Exibe as imagens em uma grade que se reorganiza conforme a largura disponível.
 Mantém cache das miniaturas e oferece seleção por mouse ou teclado.
 
-### `ImageViewerPanel`
+### `image_viewer`
+
+#### `ImageViewerPanel`
 
 Exibe a imagem selecionada com ajuste proporcional, tamanho real, zoom seguro,
 barras de rolagem e movimentação por arraste.
