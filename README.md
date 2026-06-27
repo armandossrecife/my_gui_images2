@@ -158,16 +158,8 @@ histórica da modernização.
 
 #### Tela principal
 
-![Tela principal](docs/T1-Download-Imagem.png)
+![Tela principal](docs/T1-principal.png)
 
 #### Visualização de imagem
 
-![Visualização de imagem](docs/T2-Mostra-Imagem.png)
-
-#### Lista de imagens
-
-![Lista de imagens](docs/T3-Menu-Mostra-Imagens.png)
-
-#### Imagem selecionada
-
-![Imagem selecionada](docs/T4-Tela-Imagem-Selecionada.png)
+![Visualização de imagem](docs/T2-download.png)
