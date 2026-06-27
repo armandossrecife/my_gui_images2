@@ -143,6 +143,12 @@ Os testes cobrem:
 
 Mais informações sobre as classes estão em [detalhes.md](detalhes.md).
 
+## Documentação técnica
+
+A especificação de arquitetura, fluxos, concorrência, persistência, contratos,
+testes e o diagrama UML de classes estão em
+[docs/DOCUMENTACAO_TECNICA.md](docs/DOCUMENTACAO_TECNICA.md).
+
 ## Interface
 
 A aplicação utiliza uma única janela com três áreas:

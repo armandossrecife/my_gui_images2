@@ -1,5 +1,8 @@
 # Estrutura da aplicação
 
+Para a documentação completa, incluindo fluxos, contratos e diagrama UML, consulte
+[docs/DOCUMENTACAO_TECNICA.md](docs/DOCUMENTACAO_TECNICA.md).
+
 ## Módulo `entidades`
 
 ### `Util`
